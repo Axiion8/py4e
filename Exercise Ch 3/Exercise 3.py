@@ -11,13 +11,38 @@
 
 #Enter score: 0.95
 #A
+
 #Enter score: perfect
 #Bad score
+
 #Enter score: 10.0
 #Bad score
+
 #Enter score: 0.75
 #C
+
 #Enter score: 0.5
 #F
-#Run the program repeatedly as shown above to test the various different values
-#for input.
+
+#Run the program repeatedly as shown above to test the various different values for input.
+
+try:
+    score = float(input("Enter score: "))
+    isValid = bool(True)
+except:
+    print("Bad score")
+    isValid = bool(False)
+
+if isValid != False:
+    if score > 1.0:
+        print("Bad score")
+    elif 1.0 >= score >= 0.9:
+        print("A")
+    elif 0.9 > score >= 0.8:
+        print("B")
+    elif 0.8 > score >= 0.7:
+        print("C")
+    elif 0.7 > score >= 0.6:
+        print("D")
+    else:
+        print("F")

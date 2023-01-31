@@ -9,15 +9,20 @@
 #Enter Hours: forty
 #Error, please enter numeric input
 
-inHours = float(input('Enter Hours:'))
-inRate = float(input('Enter Rate:'))
+try:
+    inHours = float(input('Enter Hours:'))
+    inRate = float(input('Enter Rate:'))
+except:
+    isValidInput = bool(False)
 
-if inHours > 40:
+if isValidInput == False:
+    print("Error, please enter numeric input")
+
+elif inHours > 40:
     otHours = inHours-40
     otPay = ((otHours*1.5)*inRate)
     pay = round((40*inRate)+otPay,2)
 
 else:
     pay = round(inHours * inRate, 2)
-
-print(pay)
+    print(pay)
