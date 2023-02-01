@@ -22,14 +22,7 @@
 #Enter score: 0.5
 #F
 
-try:
-    score = float(input("Enter score: "))
-    isValid = bool(True)
-except:
-    print("Bad score")
-    isValid = bool(False)
-
-if isValid != False:
+def whatGrade(score):
     if score > 1.0:
         print("Bad score")
     elif 1.0 >= score >= 0.9:
@@ -42,3 +35,13 @@ if isValid != False:
         print("D")
     else:
         print("F")
+
+try:
+    score = float(input("Enter score: "))
+    isValid = bool(True)
+except:
+    print("Bad score")
+    isValid = bool(False)
+
+if isValid != False:
+    whatGrade(score)
